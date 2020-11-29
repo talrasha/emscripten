@@ -1,3 +1,9 @@
+#define __LITTLE_ENDIAN 1234
+#define __BIG_ENDIAN 4321
+#define __USE_TIME_BITS64 1
+
+#define __BYTE_ORDER __LITTLE_ENDIAN
+
 #define _Addr __PTRDIFF_TYPE__
 #define _Int64 __INT64_TYPE__
 #define _Reg __PTRDIFF_TYPE__
@@ -410,6 +416,12 @@ typedef struct __sigset_t { unsigned long __bits[128/sizeof(long)]; } sigset_t;
 #if defined(__NEED_struct_iovec) && !defined(__DEFINED_struct_iovec)
 struct iovec { void *iov_base; size_t iov_len; };
 #define __DEFINED_struct_iovec
+#endif
+
+
+#if defined(__NEED_struct_winsize) && !defined(__DEFINED_struct_winsize)
+struct winsize { unsigned short ws_row, ws_col, ws_xpixel, ws_ypixel; };
+#define __DEFINED_struct_winsize
 #endif
 
 

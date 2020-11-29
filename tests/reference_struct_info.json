@@ -319,16 +319,16 @@
         "F_DUPFD": 0,
         "F_GETFD": 1,
         "F_GETFL": 3,
-        "F_GETLK": 12,
-        "F_GETLK64": 12,
+        "F_GETLK": 5,
+        "F_GETLK64": 5,
         "F_GETOWN": 9,
         "F_GETOWN_EX": 16,
         "F_SETFD": 2,
         "F_SETFL": 4,
-        "F_SETLK": 13,
-        "F_SETLK64": 13,
-        "F_SETLKW": 14,
-        "F_SETLKW64": 14,
+        "F_SETLK": 6,
+        "F_SETLK64": 6,
+        "F_SETLKW": 7,
+        "F_SETLKW64": 7,
         "F_SETOWN": 8,
         "F_UNLCK": 2,
         "INADDR_LOOPBACK": 2130706433,
@@ -1502,8 +1502,8 @@
             }
         },
         "libc": {
-            "__size__": 64,
-            "global_locale": 40
+            "__size__": 56,
+            "global_locale": 32
         },
         "linger": {
             "__size__": 8,
@@ -1540,21 +1540,21 @@
             "p_proto": 8
         },
         "pthread": {
-            "__size__": 228,
-            "attr": 104,
-            "cancelasync": 60,
-            "canceldisable": 56,
-            "detached": 64,
-            "locale": 172,
+            "__size__": 168,
+            "attr": 12,
+            "cancelasync": 97,
+            "canceldisable": 96,
+            "detach_state": 88,
+            "locale": 152,
             "profilerBlock": 8,
-            "robust_list": 152,
-            "self": 12,
-            "stack": 76,
-            "stack_size": 80,
+            "robust_list": 132,
+            "self": 56,
+            "stack": 108,
+            "stack_size": 112,
             "threadExitCode": 4,
             "threadStatus": 0,
-            "tid": 40,
-            "tsd": 100
+            "tid": 80,
+            "tsd": 128
         },
         "rlimit": {
             "__size__": 16,

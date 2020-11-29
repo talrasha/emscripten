@@ -11,7 +11,7 @@
               "profilerBlock",
               "self",
               "tsd",
-              "detached",
+              "detach_state",
               "stack",
               "stack_size",
               "attr",
