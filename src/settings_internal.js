@@ -135,10 +135,11 @@ var MINIFY_ASMJS_EXPORT_NAMES = 1;
 // Internal: represents a browser version that is not supported at all.
 var TARGET_NOT_SUPPORTED = 0x7FFFFFFF;
 
-// Wasm backend symbols that are considered system symbols and don't
-// have the normal C symbol name mangled applied (== prefix with an underscore)
-// (Also implicily on this list is any function that starts with string "dynCall_")
-var WASM_SYSTEM_EXPORTS = ['setTempRet0', 'getTempRet0', 'stackAlloc', 'stackSave', 'stackRestore'];
+// Wasm exports that are considered system symbols and exposed to JS
+// with the normal name mangling (_ prefix).
+// Implicily added to this list is any function that starts with string
+// "dynCall_".
+var WASM_SYSTEM_EXPORTS = ['stackAlloc', 'stackSave', 'stackRestore'];
 
 // Internal: value of -flto argument (either full or thin)
 var LTO = 0;

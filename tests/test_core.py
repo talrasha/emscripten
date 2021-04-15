@@ -3905,7 +3905,7 @@ ok
       int64_t sidey() {
         return 42;
       }
-    ''', 'other says 42.', force_c=True, main_module=1)
+    ''', 'other says 42.', force_c=True)
 
   @all_engines
   @needs_dylink
@@ -3940,7 +3940,7 @@ ok
         x = 18 - x;
         return x;
       }
-    ''', 'other says -1311768467750121224.\nmy fp says: 43.\nmy second fp says: 43.', force_c=True, main_module=1)
+    ''', 'other says -1311768467750121224.\nmy fp says: 43.\nmy second fp says: 43.', force_c=True)
 
   @needs_dylink
   @also_with_wasm_bigint
@@ -3993,7 +3993,7 @@ res64 - external 64\n''', header='''
       #include <stdint.h>
       EMSCRIPTEN_KEEPALIVE int32_t function_ret_32(int32_t i, int32_t j, int32_t k);
       EMSCRIPTEN_KEEPALIVE int64_t function_ret_64(int32_t i, int32_t j, int32_t k);
-    ''', force_c=True, main_module=1)
+    ''', force_c=True)
 
   @needs_dylink
   @also_with_wasm_bigint
